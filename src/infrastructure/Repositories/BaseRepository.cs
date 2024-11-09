@@ -1,16 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shopzy.Application.Abstractions.Interfaces;
-using Shopzy.Application.Data;
 using Shopzy.Domain.Entities;
+using Shopzy.Infrastructure.Persistence;
 
 namespace Shopzy.Infrastructure.Repositories;
 
 public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity>
     where TEntity : AuditableEntity
 {
-    private readonly IApplicationDbContext _context;
+    private readonly ApplicationDbContext _context;
 
-    public BaseRepository(IApplicationDbContext dbContext)
+    public BaseRepository(ApplicationDbContext dbContext)
     {
         _context = dbContext;
     }

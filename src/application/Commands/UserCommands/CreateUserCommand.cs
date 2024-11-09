@@ -6,7 +6,6 @@ using Shopzy.Contracts.Events;
 using Shopzy.Application.Exceptions;
 using Shopzy.Application.Utils;
 using Shopzy.Domain.Entities;
-using Shopzy.Domain.ValueObjects;
 using Shopzy.Application.Dtos;
 using Shopzy.Application.Abstractions.Interfaces;
 

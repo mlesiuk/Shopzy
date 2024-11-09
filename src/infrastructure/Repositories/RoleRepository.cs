@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shopzy.Application.Abstractions.Interfaces;
-using Shopzy.Application.Data;
 using Shopzy.Domain.Entities;
 using Shopzy.Infrastructure.Persistence;
 
@@ -8,9 +7,9 @@ namespace Shopzy.Infrastructure.Repositories;
 
 public class RoleRepository : BaseRepository<Role>, IRoleRepository
 {
-    private readonly IApplicationDbContext _context;
+    private readonly ApplicationDbContext _context;
 
-    public RoleRepository(IApplicationDbContext context) : base(context)
+    public RoleRepository(ApplicationDbContext context) : base(context)
     {
         _context = context;
     }

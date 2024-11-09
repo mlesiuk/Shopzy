@@ -2,11 +2,10 @@
 using System.Reflection;
 using Shopzy.Domain.Entities;
 using Shopzy.Application.Abstractions.Interfaces;
-using Shopzy.Application.Data;
 
 namespace Shopzy.Infrastructure.Persistence;
 
-public sealed class ApplicationDbContext : DbContext, IApplicationDbContext
+public sealed class ApplicationDbContext : DbContext
 {
     private readonly DateTime _dateTime = DateTime.UtcNow;
     private readonly ICurrentUserService _currentUserService;
@@ -42,12 +41,12 @@ public sealed class ApplicationDbContext : DbContext, IApplicationDbContext
             {
                 case EntityState.Added:
                     entry.Entity.CreatedBy = username;
-                    entry.Entity.Created = _dateTime;
+                    entry.Entity.CreatedUtc = _dateTime;
                     break;
 
                 case EntityState.Modified:
                     entry.Entity.LastModifiedBy = username;
-                    entry.Entity.LastModified = _dateTime;
+                    entry.Entity.LastModifiedUtc = _dateTime;
                     break;
             }
         }

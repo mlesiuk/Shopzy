@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Shopzy.Application.Abstractions.Interfaces;
-using Shopzy.Application.Data;
 using Shopzy.Infrastructure.Data;
 using Shopzy.Infrastructure.Encryption;
 using Shopzy.Infrastructure.Jwt;
@@ -27,14 +26,13 @@ public static class DependencyInjection
             })
         );
 
-        services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
-
         services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.Decorate<ICategoryRepository, CachedCategoryRepository>();
 
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUserRoleRepository, UserRoleRepository>();
         services.AddScoped<IRoleRepository, RoleRepository>();
 
         services.AddScoped<IJwtGenerator, JwtGenerator>();

@@ -16,7 +16,7 @@ public abstract class BaseConfiguration
             .HasKey(pe => pe.Id);
 
         builder
-            .Property(pe => pe.Created)
+            .Property(pe => pe.CreatedUtc)
             .IsRequired();
 
         builder

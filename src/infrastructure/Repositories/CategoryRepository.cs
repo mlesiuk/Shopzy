@@ -1,15 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shopzy.Application.Abstractions.Interfaces;
-using Shopzy.Application.Data;
 using Shopzy.Domain.Entities;
+using Shopzy.Infrastructure.Persistence;
 
 namespace Shopzy.Infrastructure.Repositories;
 
 public class CategoryRepository : BaseRepository<Category>, ICategoryRepository
 {
-    private readonly IApplicationDbContext _context;
+    private readonly ApplicationDbContext _context;
 
-    public CategoryRepository(IApplicationDbContext context) : base(context)
+    public CategoryRepository(ApplicationDbContext context) : base(context)
     {
         _context = context;
     }

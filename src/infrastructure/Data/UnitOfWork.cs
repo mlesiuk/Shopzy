@@ -22,13 +22,19 @@ public sealed class UnitOfWork : IUnitOfWork
         {
             if (entry.State == EntityState.Added)
             {
-                entry.Property(a => a.Created)
+                entry.Property(a => a.CreatedUtc)
                     .CurrentValue = DateTime.UtcNow;
             }
 
             if (entry.State == EntityState.Modified)
             {
-                entry.Property(a => a.LastModified)
+                entry.Property(a => a.LastModifiedUtc)
+                    .CurrentValue = DateTime.UtcNow;
+            }
+
+            if (entry.State == EntityState.Deleted)
+            {
+                entry.Property(a => a.DeletedUtc)
                     .CurrentValue = DateTime.UtcNow;
             }
         }
