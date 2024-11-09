@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopzy.Contracts", "src\con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopzy.Notifier", "src\notifier\Shopzy.Notifier.csproj", "{ADFA98BB-2C71-44B4-9EFD-842ECF146775}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C98E984B-42EC-4140-82A2-2C83468FA50E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Architecture.Tests", "tests\Architecture.Tests\Architecture.Tests.csproj", "{B34259FD-4125-44A5-86CC-003445FD6BB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,10 @@ Global
 		{ADFA98BB-2C71-44B4-9EFD-842ECF146775}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADFA98BB-2C71-44B4-9EFD-842ECF146775}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADFA98BB-2C71-44B4-9EFD-842ECF146775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34259FD-4125-44A5-86CC-003445FD6BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34259FD-4125-44A5-86CC-003445FD6BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34259FD-4125-44A5-86CC-003445FD6BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34259FD-4125-44A5-86CC-003445FD6BB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,7 @@ Global
 		{CC197DF5-CFA2-4720-BF49-B0E0CA79D48C} = {4DDED409-AE6F-43E6-A9E7-03DF1AAE4FC9}
 		{750E2C6B-1F78-4E22-B480-B08A5C8F9D48} = {4DDED409-AE6F-43E6-A9E7-03DF1AAE4FC9}
 		{ADFA98BB-2C71-44B4-9EFD-842ECF146775} = {4DDED409-AE6F-43E6-A9E7-03DF1AAE4FC9}
+		{B34259FD-4125-44A5-86CC-003445FD6BB6} = {C98E984B-42EC-4140-82A2-2C83468FA50E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {02E50384-C231-4870-814E-86C2E9F089E6}

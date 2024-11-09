@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Shopzy.Application.Commands.CategoryCommands;
 using Shopzy.Application.Common;
 using Shopzy.Application.Dtos;
-using Shopzy.Application.Queries;
+using Shopzy.Application.Queries.CategoryQueries;
 
 namespace Shopzy.Api.Controllers;
 

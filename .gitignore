@@ -32,3 +32,5 @@ src/notifier/appsettings.*.json
 src/notifier/Persistence/Migrations/*
 
 /docker-compose.*.yml
+/tests/Architecture.Tests/bin/*
+/tests/Architecture.Tests/obj/*

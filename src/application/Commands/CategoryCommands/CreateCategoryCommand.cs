@@ -38,7 +38,7 @@ public sealed class CreateCategoryCommandHandler
     {
         var validationResult = await _validator.ValidateAsync(request, cancellationToken);
         var failures = validationResult.Errors?.ToList();
-        if (failures is not null && failures!.Any())
+        if (failures is not null && failures!.Count != 0)
         {
             return new ValidationException(failures);
         }

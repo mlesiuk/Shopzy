@@ -4,15 +4,15 @@ using Shopzy.Application.Abstractions.Interfaces;
 using Shopzy.Application.Exceptions;
 using Shopzy.Domain.Entities;
 
-namespace Shopzy.Application.Queries;
+namespace Shopzy.Application.Queries.CategoryQueries;
 
-public sealed class GetCategoryByIdQuery 
+public sealed class GetCategoryByIdQuery
     : IRequest<OneOf<Category, NotFoundException>>
 {
     public Guid Id { get; set; }
 }
 
-public sealed class GetCategoryByIdQueryHandler 
+public sealed class GetCategoryByIdQueryHandler
     : IRequestHandler<GetCategoryByIdQuery, OneOf<Category, NotFoundException>>
 {
     private readonly ICategoryRepository _repository;
@@ -24,7 +24,7 @@ public sealed class GetCategoryByIdQueryHandler
     }
 
     public async Task<OneOf<Category, NotFoundException>> Handle(
-        GetCategoryByIdQuery request, 
+        GetCategoryByIdQuery request,
         CancellationToken cancellationToken)
     {
         var category = await _repository.GetByIdAsync(request.Id);
